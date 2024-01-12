@@ -1,0 +1,7 @@
+-- SQL Server restore
+RESTORE DATABASE YourDatabaseName
+FROM DISK = 'C:\Backup\YourDatabaseName.bak'
+WITH REPLACE, RECOVERY;
+
+-- MySQL restore
+mysql -u username -p YourDatabaseName < YourDatabaseName_backup.sql
