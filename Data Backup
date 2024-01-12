@@ -1,0 +1,7 @@
+-- SQL Server backup
+BACKUP DATABASE YourDatabaseName
+TO DISK = 'C:\Backup\YourDatabaseName.bak'
+WITH FORMAT, INIT, COMPRESSION;  -- Use INIT to overwrite existing backup
+
+-- MySQL backup
+mysqldump -u username -p YourDatabaseName > YourDatabaseName_backup.sql
