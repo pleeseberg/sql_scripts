@@ -1,0 +1,31 @@
+-- Aggregate data using COUNT, SUM, AVG, MIN, MAX without grouping
+SELECT
+  COUNT(column1) AS total_rows,
+  SUM(column2) AS total_sum,
+  AVG(column3) AS average_value,
+  MIN(column4) AS min_value,
+  MAX(column5) AS max_value
+FROM your_table_name;
+
+-- Aggregate data using GROUP BY with COUNT
+SELECT
+  group_column,
+  COUNT(*) AS row_count
+FROM your_table_name
+GROUP BY group_column;
+
+-- Aggregate data using GROUP BY with SUM and AVG
+SELECT
+  group_column,
+  SUM(column1) AS total_sum,
+  AVG(column2) AS average_value
+FROM your_table_name
+GROUP BY group_column;
+
+-- Aggregate data using GROUP BY with HAVING clause
+SELECT
+  group_column,
+  COUNT(*) AS row_count
+FROM your_table_name
+GROUP BY group_column
+HAVING row_count > 5;  -- Additional filtering after aggregation
