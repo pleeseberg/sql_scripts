@@ -1,0 +1,25 @@
+-- Retrieve specific columns from a single table
+SELECT column1, column2, column3
+FROM your_table_name;
+
+-- Retrieve specific columns with a WHERE clause for filtering data
+SELECT column1, column2, column3
+FROM your_table_name
+WHERE condition_column = 'desired_value';
+
+-- Retrieve specific columns with multiple conditions
+SELECT column1, column2, column3
+FROM your_table_name
+WHERE condition_column1 = 'desired_value1'
+  AND condition_column2 = 'desired_value2';
+
+-- Retrieve all columns with a WHERE clause
+SELECT *
+FROM your_table_name
+WHERE condition_column = 'desired_value';
+
+-- Retrieve data from multiple tables using JOIN
+SELECT table1.column1, table1.column2, table2.column3
+FROM table1
+JOIN table2 ON table1.common_column = table2.common_column
+WHERE condition_column = 'desired_value';
