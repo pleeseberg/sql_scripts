@@ -1,0 +1,48 @@
+-- INNER JOIN: Retrieves rows that have matching values in both tables
+SELECT
+  t1.column1,
+  t1.column2,
+  t2.column3
+FROM table1 t1
+INNER JOIN table2 t2 ON t1.common_column = t2.common_column;
+
+-- LEFT JOIN: Retrieves all rows from the left table and the matching rows from the right table
+SELECT
+  t1.column1,
+  t1.column2,
+  t2.column3
+FROM table1 t1
+LEFT JOIN table2 t2 ON t1.common_column = t2.common_column;
+
+-- RIGHT JOIN: Retrieves all rows from the right table and the matching rows from the left table
+SELECT
+  t1.column1,
+  t1.column2,
+  t2.column3
+FROM table1 t1
+RIGHT JOIN table2 t2 ON t1.common_column = t2.common_column;
+
+-- FULL JOIN: Retrieves all rows when there is a match in either the left or right table
+SELECT
+  t1.column1,
+  t1.column2,
+  t2.column3
+FROM table1 t1
+FULL JOIN table2 t2 ON t1.common_column = t2.common_column;
+
+-- Handling NULL values with COALESCE or IS NULL
+SELECT
+  t1.column1,
+  COALESCE(t2.column2, 'DefaultValue') AS transformed_column
+FROM table1 t1
+LEFT JOIN table2 t2 ON t1.common_column = t2.common_column;
+
+-- Checking for NULL values
+SELECT
+  t1.column1,
+  CASE
+    WHEN t2.common_column IS NULL THEN 'No Match'
+    ELSE 'Match'
+  END AS match_status
+FROM table1 t1
+LEFT JOIN table2 t2 ON t1.common_column = t2.common_column;
