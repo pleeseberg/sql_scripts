@@ -1,0 +1,19 @@
+-- Updating all rows in a table
+UPDATE your_table_name
+SET column1 = 'new_value1', column2 = 'new_value2'
+WHERE condition;
+
+-- Updating specific rows
+UPDATE your_table_name
+SET column1 = 'new_value1', column2 = 'new_value2'
+WHERE id_column = 1;
+
+-- Updating with conditions
+UPDATE your_table_name
+SET column1 = 'new_value1'
+WHERE condition_column = 'desired_value';
+
+-- Updating using subqueries
+UPDATE your_table_name
+SET column1 = (SELECT new_value FROM another_table WHERE condition)
+WHERE condition;
