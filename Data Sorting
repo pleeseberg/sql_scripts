@@ -1,0 +1,24 @@
+-- Sorting data in ascending order
+SELECT column1, column2, column3
+FROM your_table_name
+ORDER BY column1 ASC;
+
+-- Sorting data in descending order
+SELECT column1, column2, column3
+FROM your_table_name
+ORDER BY column1 DESC;
+
+-- Sorting by multiple columns
+SELECT column1, column2, column3
+FROM your_table_name
+ORDER BY column1 ASC, column2 DESC;
+
+-- Sorting with NULL values
+SELECT column1, column2, column3
+FROM your_table_name
+ORDER BY column1 ASC NULLS FIRST;  -- or NULLS LAST for descending order
+
+-- Sorting with expressions or functions
+SELECT column1, column2, column3
+FROM your_table_name
+ORDER BY LENGTH(column1) DESC, column2 ASC;
