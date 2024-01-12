@@ -1,0 +1,19 @@
+-- Deleting all rows from a table
+DELETE FROM your_table_name;
+
+-- Deleting specific rows based on conditions
+DELETE FROM your_table_name
+WHERE condition_column = 'undesired_value';
+
+-- Deleting a specific row by primary key or unique column
+DELETE FROM your_table_name
+WHERE id_column = 1;
+
+-- Deleting rows using subqueries
+DELETE FROM your_table_name
+WHERE id_column IN (SELECT id_column FROM another_table WHERE condition);
+
+-- Deleting a specific number of rows (e.g., the first 10 rows)
+DELETE FROM your_table_name
+ORDER BY column_name
+LIMIT 10;
