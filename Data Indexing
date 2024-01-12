@@ -1,0 +1,26 @@
+-- Creating an index on a single column
+CREATE INDEX idx_column1
+ON your_table_name (column1);
+
+-- Creating an index on multiple columns
+CREATE INDEX idx_columns12
+ON your_table_name (column1, column2);
+
+-- Creating a unique index
+CREATE UNIQUE INDEX idx_unique_column3
+ON your_table_name (column3);
+
+
+Understanding impact:
+Read operations: Indexing can significantly improve the speed of SELECT queries, especially when filtering or sorting based on indexed columns.
+Write operations: While indexing improves read performance, it can slightly slow down write operations (INSERT, UPDATE, DELETE), as the indexes need to be updated.
+
+
+-- Viewing existing indexes on a table
+SHOW INDEX FROM your_table_name;
+
+-- Dropping an index
+DROP INDEX idx_column1 ON your_table_name;
+
+-- Analyzing and rebuilding indexes
+ANALYZE TABLE your_table_name;
