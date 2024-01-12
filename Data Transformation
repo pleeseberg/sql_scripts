@@ -1,0 +1,45 @@
+-- Conditional transformation with CASE statement
+SELECT
+  column1,
+  column2,
+  CASE
+    WHEN condition_column = 'value1' THEN 'TransformedValue1'
+    WHEN condition_column = 'value2' THEN 'TransformedValue2'
+    ELSE 'DefaultTransformedValue'
+  END AS transformed_column
+FROM your_table_name;
+
+-- String manipulation with functions
+SELECT
+  column1,
+  column2,
+  CONCAT(column3, ' ', column4) AS concatenated_columns
+FROM your_table_name;
+
+-- Date manipulation with functions
+SELECT
+  column1,
+  column2,
+  DATE_FORMAT(date_column, '%Y-%m-%d') AS formatted_date
+FROM your_table_name;
+
+-- Numerical transformation with functions
+SELECT
+  column1,
+  column2,
+  column3 * 1.1 AS increased_value
+FROM your_table_name;
+
+-- Temporary table or CTE for complex transformations
+WITH temp_table AS (
+  SELECT
+    column1,
+    column2,
+    column3 * 1.1 AS transformed_value
+  FROM your_table_name
+)
+SELECT
+  column1,
+  column2,
+  transformed_value
+FROM temp_table;
