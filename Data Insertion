@@ -1,0 +1,15 @@
+-- Inserting a single record
+INSERT INTO your_table_name (column1, column2, column3)
+VALUES ('value1', 'value2', 'value3');
+
+-- Inserting multiple records
+INSERT INTO your_table_name (column1, column2, column3)
+VALUES
+  ('value1', 'value2', 'value3'),
+  ('value4', 'value5', 'value6');
+
+-- Inserting records from another table
+INSERT INTO your_table_name (column1, column2, column3)
+SELECT column1, column2, column3
+FROM another_table
+WHERE condition;
