@@ -1,0 +1,21 @@
+-- Basic filtering with WHERE clause
+SELECT column1, column2, column3
+FROM your_table_name
+WHERE condition_column = 'desired_value';
+
+-- Combining conditions with AND and OR operators
+SELECT column1, column2, column3
+FROM your_table_name
+WHERE condition_column1 = 'desired_value1'
+  AND condition_column2 = 'desired_value2';
+
+-- Filtering with subqueries
+SELECT column1, column2, column3
+FROM your_table_name
+WHERE condition_column IN (SELECT subquery_column FROM subquery_table WHERE subquery_condition = 'subquery_value');
+
+-- Using OR operator
+SELECT column1, column2, column3
+FROM your_table_name
+WHERE condition_column1 = 'desired_value1'
+   OR condition_column2 = 'desired_value2';
